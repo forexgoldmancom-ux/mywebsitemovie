@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CinematicBliss</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="js/jquery-func.js" defer></script>
+</head>
+<body>
+  <div id="shell">
+    <header id="header">
+      <h1 id="logo"><a href="#">MovieHunter</a></h1>
+
+      <!-- Banner Ad 1 -->
+      <div class="ad-banner">
+        <!-- Paste your Google AdSense banner ad code here -->
+      </div>
+
+      <div class="social">
+        <span>Follow us on:</span>
+        <ul>
+          <li><a class="twitter" href="#">Twitter</a></li>
+          <li><a class="facebook" href="#">Facebook</a></li>
+          <li><a class="vimeo" href="#">Vimeo</a></li>
+          <li><a class="rss" href="#">RSS</a></li>
+        </ul>
+      </div>
+
+      <nav id="navigation">
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">In Theaters</a></li>
+
+          <!-- Banner Ad 2 inside navigation if desired -->
+          <li>
+            <div class="ad-banner-nav">
+              <!-- Google AdSense banner ad code here -->
+            </div>
+          </li>
+
+          <li><a href="#">Coming Soon</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Advertise</a></li>
+        </ul>
+      </nav>
+
+      <div id="sub-navigation">
+        <ul>
+          <li><a href="#">Show All</a></li>
+          <li><a href="#">Latest Trailers</a></li>
+          <li><a href="#">Top Rated</a></li>
+
+          <!-- Banner Ad 3 at sub-navigation -->
+          <li>
+            <div class="ad-banner-subnav">
+              <!-- Google AdSense banner ad code here -->
+            </div>
+          </li>
+
+          <li><a href="#">Most Commented</a></li>
+        </ul>
+        <div id="search">
+          <form action="#" method="get">
+            <label for="search-field">Search</label>
+            <input type="text" name="search-field" id="search-field" placeholder="Enter search here" />
+            <input type="submit" value="Go!" class="search-button" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="content">
+
+        <!-- Banner Ad 4 before Latest Trailers -->
+        <div class="ad-banner">
+          <!-- Google AdSense banner ad code here -->
+        </div>
+
+        <div class="box">
+          <div class="head">
+            <h2>Latest Trailers</h2>
+            <p class="text-right"><a href="#">See all</a></p>
+          </div>
+
+          <div class="movie">
+            <div class="movie-image">
+
+              <!-- Movie poster wrapped with onclick to show ad -->
+              <a href="#" onclick="showAd(event)">
+                <img src="css/images/movie1.jpg" alt="X-Man" />
+                <span class="play"><span class="name">X-MAN</span></span>
+              </a>
+
+            </div>
+            <div class="rating">
+              <p>Rating</p>
+              <div class="stars"><div class="stars-in"></div></div>
+              <span class="comments">12</span>
+            </div>
+          </div>
+
+          <!-- Banner Ad 5 between movies -->
+          <div class="ad-banner">
+            <!-- Google AdSense banner ad code here -->
+          </div>
+
+          <!-- Repeat movies and ad banners similarly as needed -->
+        </div>
+
+        <div class="box">
+          <div class="head">
+            <h2>Top Rated</h2>
+            <p class="text-right"><a href="#">See all</a></p>
+          </div>
+
+          <!-- Banner Ad 6 -->
+          <div class="ad-banner">
+            <!-- Google AdSense banner ad code here -->
+          </div>
+
+          <!-- Add top rated movie blocks here -->
+        </div>
+
+        <div class="box">
+          <div class="head">
+            <h2>Most Commented</h2>
+            <p class="text-right"><a href="#">See all</a></p>
+          </div>
+
+          <!-- Banner Ad 7 -->
+          <div class="ad-banner">
+            <!-- Google AdSense banner ad code here -->
+          </div>
+
+          <!-- Add most commented movie blocks here -->
+        </div>
+      </section>
+
+      <aside id="news">
+        <div class="head">
+          <h3>News</h3>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+
+        <!-- Banner Ad 8 -->
+        <div class="ad-banner">
+          <!-- Google AdSense banner ad code here -->
+        </div>
+
+        <article class="content">
+          <p class="date">12.04.09</p>
+          <h4>Disney's A Christmas Carol</h4>
+          <p>Disney's A Christmas Carol, a multi-sensory thrill ride directed by Robert Zemeckis.</p>
+          <a href="#">Read more</a>
+        </article>
+      </aside>
+
+      <aside id="coming">
+        <div class="head">
+          <h3>Coming Soon!</h3>
+          <p class="text-right"><a href="#">See all</a></p>
+        </div>
+
+        <!-- Banner Ad 9 -->
+        <div class="ad-banner">
+          <!-- Google AdSense banner ad code here -->
+        </div>
+
+        <div class="content">
+          <h4>The Princess and the Frog</h4>
+          <a href="#" onclick="showAd(event)">
+            <img src="css/images/coming-soon1.jpg" alt="The Princess and the Frog" />
+          </a>
+          <p>Walt Disney Animation Studios presents the musical The Princess and the Frog, set in New Orleans.</p>
+          <a href="#">Read more</a>
+        </div>
+      </aside>
+
+      <!-- Banner Ad 10 after main content -->
+      <div class="ad-banner">
+        <!-- Google AdSense banner ad code here -->
+      </div>
+
+    </main>
+
+    <footer id="footer">
+      <p>Copyright ©️ 2025 MovieHunter - All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    // Function to handle showing ad on movie poster click
+    function showAd(event) {
+      event.preventDefault();
+      // Your Google AdSense ad display logic here or redirect to a page with ads
+      alert('Display Ad here or redirect to ad page');
+    }
+  </script>
+</body>
+</html>
